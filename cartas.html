@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitología Nórdica - Cartas de Personajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titulo-principal">Los Dioses del Norte</h1>
+
+    <script>
+        const categorias = {
+            "Dioses Principales": {
+                descripcion: "Los Æsir más poderosos que gobiernan desde Asgard",
+                dioses: [
+                    { nombre: "Odín", descripcion: "El Padre de Todos, dios de la sabiduría, la guerra y la muerte. Sacrificó un ojo por conocimiento y cuelga del Yggdrasil.", dominio: "Sabiduría", imagen: "https://files.oaiusercontent.com/file-KD7jPWEfQZtSh8J3VBsi9K?se=2025-02-18T22%3A03%3A19Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D303407cf-b5dd-46aa-8369-2d4fabc2b5d8.webp&sig=xk7UnrT%2BUaKYC0WZ6RC/aAJmnBlGC1mly8YPjRn1DZE%3D" },
+                    { nombre: "Thor", descripcion: "Dios del trueno y protector de la humanidad. Porta el martillo Mjolnir y lucha contra los gigantes.", dominio: "Trueno", imagen: "https://files.oaiusercontent.com/file-8NgaagGbWN57Doobe1Jjio?se=2025-02-18T22%3A05%3A11Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D07639f58-7dbc-46e7-be62-99b761f8cb31.webp&sig=PvknvTdFBuZ9cDIGl%2BJSoibQITLSi2KFkoSakAGaEc0%3D" },
+                    { nombre: "Frigg", descripcion: "Reina de Asgard, esposa de Odín. Diosa del matrimonio y la maternidad.", dominio: "Matrimonio", imagen: "ruta/a/imagen-frigg.jpg" },
+                    { nombre: "Tyr", descripcion: "Dios de la justicia y el honor. Sacrificó su mano derecha para encadenar al lobo Fenrir.", dominio: "Justicia", imagen: "ruta/a/imagen-tyr.jpg" }
+                ]
+            },
+            "Dioses de la Naturaleza": {
+                descripcion: "Deidades que controlan los elementos y las fuerzas naturales",
+                dioses: [
+                    { nombre: "Njördr", descripcion: "Dios del mar y el viento. Padre de Freya y Freyr, originario de Vanaheim.", dominio: "Mar", imagen: "ruta/a/imagen-njord.jpg" },
+                    { nombre: "Freyr", descripcion: "Dios de la fertilidad y la prosperidad. Hermano de Freya y señor de los elfos.", dominio: "Fertilidad", imagen: "ruta/a/imagen-freyr.jpg" },
+                    { nombre: "Skadi", descripcion: "Diosa de la caza y el invierno. Giganta que se casó con Njördr.", dominio: "Invierno", imagen: "ruta/a/imagen-skadi.jpg" },
+                    { nombre: "Ullr", descripcion: "Dios del invierno, la caza y el tiro con arco. Hijo de Sif.", dominio: "Caza", imagen: "ruta/a/imagen-ullr.jpg" },
+                    { nombre: "Aegir", descripcion: "Dios del océano y las tormentas marinas. Famoso por sus festines.", dominio: "Océano", imagen: "ruta/a/imagen-aegir.jpg" }
+                ]
+            },
+            "Dioses del Destino y Caos": {
+                descripcion: "Aquellos que influyen en el destino de dioses y mortales",
+                dioses: [
+                    { nombre: "Loki", descripcion: "El dios embaucador, maestro del engaño y el caos. Padre de Fenrir, Jörmungandr y Hel.", dominio: "Caos", imagen: "ruta/a/imagen-loki.jpg" },
+                    { nombre: "Hel", descripcion: "Gobernante del inframundo. Hija de Loki, custodia las almas de los que no mueren en batalla.", dominio: "Muerte", imagen: "ruta/a/imagen-hel.jpg" },
+                    { nombre: "Höðr", descripcion: "Dios ciego que, engañado por Loki, causa la muerte de Baldur.", dominio: "Oscuridad", imagen: "ruta/a/imagen-hodr.jpg" },
+                    { nombre: "Vali", descripcion: "Hijo de Odín, nacido para vengar la muerte de Baldur. Mata a Höðr.", dominio: "Venganza", imagen: "ruta/a/imagen-vali.jpg" }
+                ]
+            },
+            "Guardianes y Protectores": {
+                descripcion: "Defensores de los reinos y custodios del orden divino",
+                dioses: [
+                    { nombre: "Heimdall", descripcion: "Guardián del Bifrost, el puente arcoíris. Posee vista y oído extraordinarios.", dominio: "Vigilancia", imagen: "ruta/a/imagen-heimdall.jpg" },
+                    { nombre: "Vidar", descripcion: "El dios silencioso. Hijo de Odín, vengará a su padre durante el Ragnarök.", dominio: "Venganza", imagen: "ruta/a/imagen-vidar.jpg" },
+                    { nombre: "Forseti", descripcion: "Dios de la justicia y la reconciliación. Hijo de Baldur y Nanna.", dominio: "Reconciliación", imagen: "ruta/a/imagen-forseti.jpg" }
+                ]
+            },
+            "Dioses del Amor y la Luz": {
+                descripcion: "Deidades asociadas con el amor, la belleza y la luz",
+                dioses: [
+                    { nombre: "Freya", descripcion: "Diosa del amor, la belleza y la guerra. Líder de las Valquirias y maestra de la magia seidr.", dominio: "Amor", imagen: "ruta/a/imagen-freya.jpg" },
+                    { nombre: "Baldur", descripcion: "El dios más amado, hijo de Odín y Frigg. Su muerte marca el inicio del Ragnarök.", dominio: "Luz", imagen: "ruta/a/imagen-baldur.jpg" },
+                    { nombre: "Nanna", descripcion: "Diosa de la alegría y la paz. Esposa de Baldur, muere de pena tras su muerte.", dominio: "Alegría", imagen: "ruta/a/imagen-nanna.jpg" }
+                ]
+            },
+            "Dioses de las Artes y la Prosperidad": {
+                descripcion: "Patronos de las artes, la música y la abundancia",
+                dioses: [
+                    { nombre: "Bragi", descripcion: "Dios de la poesía y la música. Esposo de Iðunn y maestro de los bardos.", dominio: "Poesía", imagen: "ruta/a/imagen-bragi.jpg" },
+                    { nombre: "Iðunn", descripcion: "Guardiana de las manzanas doradas que mantienen jóvenes a los dioses.", dominio: "Juventud", imagen: "ruta/a/imagen-idunn.jpg" },
+                    { nombre: "Sif", descripcion: "Diosa de la cosecha y esposa de Thor. Conocida por su cabello dorado.", dominio: "Cosecha", imagen: "ruta/a/imagen-sif.jpg" }
+                ]
+            }
+        };
+    
+        function crearCartas() {
+            Object.entries(categorias).forEach(([categoria, info]) => {
+                const seccion = document.createElement('section');
+                seccion.className = 'categoria';
+                
+                seccion.innerHTML = `
+                    <h2 class="categoria-titulo">${categoria}</h2>
+                    <p class="categoria-descripcion">${info.descripcion}</p>
+                    <div class="container">
+                        ${info.dioses.map(dios => `
+                            <div class="carta">
+                                <div class="carta-inner">
+                                    <div class="cara frontal">
+                                        <div class="dominio-tag">${dios.dominio}</div>
+                                        <img src="${dios.imagen}" alt="${dios.nombre}">
+                                    </div>
+                                    <div class="cara trasera">
+                                        <h3>${dios.nombre}</h3>
+                                        <p>${dios.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            
+                document.body.appendChild(seccion);
+                
+                const cartas = seccion.querySelectorAll('.carta');
+                cartas.forEach(carta => {
+                    carta.addEventListener('click', () => {
+                        carta.classList.toggle('girada');
+                    });
+                });
+            });
+        }
+    
+        crearCartas();
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(to bottom, #0a0a0a, #1c1c2e);
+    color: #e0e0e0;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    padding: 20px;
+}
+
+.categoria {
+    margin: 40px auto;
+    max-width: 90%;
+}
+
+.categoria-titulo {
+    font-size: 2rem;
+    color: silver;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.8);
+}
+
+.categoria-descripcion {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos de las cartas */
+.carta {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.carta-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.carta.girada .carta-inner {
+    transform: rotateY(180deg);
+}
+
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.frontal {
+    background: url('https://www.transparenttextures.com/patterns/wood.png'), #2e2e38;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.frontal img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid gold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.trasera {
+    background: url('https://www.transparenttextures.com/patterns/stone.png'), #1c1c2e;
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.trasera h3 {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.trasera p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Dominio de los dioses */
+.dominio-tag {
+    background: rgba(0, 0, 0, 0.8);
+    color: gold;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-shadow: 0 0 5px gold;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
