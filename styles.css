@@ -128,3 +128,24 @@ body {
         align-items: center;
     }
 }
+
+.boton-sonido {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(28, 28, 46, 0.9);
+    border: 2px solid gold;
+    color: gold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.boton-sonido:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
