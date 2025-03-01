@@ -10,6 +10,9 @@
     <audio id="musicaFondo" loop>
         <source src="Sonido/nordic-epic-adventure-dramatic-heroic-soundtrack-247522.mp3" type="audio/mpeg">
     </audio>
+    <audio id="sonidoGiro">
+        <source src="Sonido/flipcard-91468.mp3" type="audio/mpeg">
+    </audio>
 
 </head>
 
@@ -36,7 +39,7 @@
         </div>
         <div class="footer-seccion">
             <h3>Contacto</h3>
-            <p>Email: botero.sebastian7415@eam.edu.com</p>
+            <p>Email: botero.sebastian.7415@eam.edu.com</p>
         </div>
     </div>
     <div class="copyright">
@@ -102,7 +105,6 @@
                 ]
             }
         };
-
         function crearCartas() {
             Object.entries(categorias).forEach(([categoria, info]) => {
                 const seccion = document.createElement('section');
@@ -134,6 +136,12 @@
                 const cartas = seccion.querySelectorAll('.carta');
                 cartas.forEach(carta => {
                     carta.addEventListener('click', () => {
+
+                        // Reproducir sonido
+                        const sonido = document.getElementById('sonidoGiro');
+                        sonido.currentTime = 0; // Reiniciar el sonido para que se reproduzca cada vez
+                        sonido.play();
+
                         carta.classList.toggle('girada');
                     });
                 });
