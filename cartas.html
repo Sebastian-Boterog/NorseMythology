@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,42 @@
     <audio id="musicaFondo" loop>
         <source src="Sonido/nordic-epic-adventure-dramatic-heroic-soundtrack-247522.mp3" type="audio/mpeg">
     </audio>
-    
+
 </head>
+
+<header>
+    <h1 class="titulo-principal">Mitología Nórdica</h1>
+    <p class="descripcion">Explora los dioses y seres de la mitología nórdica a través de estas cartas interactivas.</p>
+    <h3>Proyecto interactivo</h3>
+</header>
+
+
+<main id="inicio">
+</main>
+
+<footer>
+    <div class="footer-contenido">
+        <div class="footer-seccion">
+            <h3>Mitología Nórdica</h3>
+            <p>Explora el fascinante mundo de los dioses nórdicos y sus leyendas.</p>
+        </div>
+        <div class="footer-seccion">
+            <h3>Realizado por</h3>
+            <p>Sebastian Botero Gonzalez</p>
+
+        </div>
+        <div class="footer-seccion">
+            <h3>Contacto</h3>
+            <p>Email: botero.sebastian7415@eam.edu.com</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Mitología Nórdica - Todos los derechos reservados</p>
+    </div>
+</footer>
+
 <body>
 
-    <h1 class="titulo-principal">Los Dioses del Norte</h1>
 
     <script>
         const categorias = {
@@ -30,17 +62,17 @@
                 descripcion: "Deidades que controlan los elementos y las fuerzas naturales",
                 dioses: [
                     { nombre: "Njördr", descripcion: "Dios del mar y el viento. Padre de Freya y Freyr, originario de Vanaheim.", dominio: "Mar", imagen: "Imagenes/njordr.webp" },
-                    { nombre: "Freyr", descripcion: "Dios de la fertilidad y la prosperidad. Hermano de Freya y señor de los elfos.", dominio: "Fertilidad", imagen: "Imagenes/freyr.webp"  },
+                    { nombre: "Freyr", descripcion: "Dios de la fertilidad y la prosperidad. Hermano de Freya y señor de los elfos.", dominio: "Fertilidad", imagen: "Imagenes/freyr.webp" },
                     { nombre: "Skadi", descripcion: "Diosa de la caza y el invierno. Giganta que se casó con Njördr.", dominio: "Invierno", imagen: "Imagenes/skadi.webp" },
                     { nombre: "Ullr", descripcion: "Dios del invierno, la caza y el tiro con arco. Hijo de Sif.", dominio: "Caza", imagen: "Imagenes/ullr.webp" },
-                    { nombre: "Aegir", descripcion: "Dios del océano y las tormentas marinas. Famoso por sus festines.", dominio: "Océano", imagen:"Imagenes/aegir.webp" }
+                    { nombre: "Aegir", descripcion: "Dios del océano y las tormentas marinas. Famoso por sus festines.", dominio: "Océano", imagen: "Imagenes/aegir.webp" }
                 ]
             },
             "Dioses del Destino y Caos": {
                 descripcion: "Aquellos que influyen en el destino de dioses y mortales",
                 dioses: [
                     { nombre: "Loki", descripcion: "El dios embaucador, maestro del engaño y el caos. Padre de Fenrir, Jörmungandr y Hel.", dominio: "Caos", imagen: "Imagenes/loki.webp" },
-                    { nombre: "Hel", descripcion: "Gobernante del inframundo. Hija de Loki, custodia las almas de los que no mueren en batalla.", dominio: "Muerte", imagen:"Imagenes/hel.webp" },
+                    { nombre: "Hel", descripcion: "Gobernante del inframundo. Hija de Loki, custodia las almas de los que no mueren en batalla.", dominio: "Muerte", imagen: "Imagenes/hel.webp" },
                     { nombre: "Höðr", descripcion: "Dios ciego que, engañado por Loki, causa la muerte de Baldur.", dominio: "Oscuridad", imagen: "Imagenes/hoor.webp" },
                     { nombre: "Vali", descripcion: "Hijo de Odín, nacido para vengar la muerte de Baldur. Mata a Höðr.", dominio: "Venganza", imagen: "Imagenes/vali.webp" }
                 ]
@@ -48,57 +80,57 @@
             "Guardianes y Protectores": {
                 descripcion: "Defensores de los reinos y custodios del orden divino",
                 dioses: [
-                    { nombre: "Heimdall", descripcion: "Guardián del Bifrost, el puente arcoíris. Posee vista y oído extraordinarios.", dominio: "Vigilancia", imagen:"Imagenes/heimdall.webp" },
+                    { nombre: "Heimdall", descripcion: "Guardián del Bifrost, el puente arcoíris. Posee vista y oído extraordinarios.", dominio: "Vigilancia", imagen: "Imagenes/heimdall.webp" },
                     { nombre: "Vidar", descripcion: "El dios silencioso. Hijo de Odín, vengará a su padre durante el Ragnarök.", dominio: "Venganza", imagen: "Imagenes/vidar.webp" },
-                    { nombre: "Forseti", descripcion: "Dios de la justicia y la reconciliación. Hijo de Baldur y Nanna.", dominio: "Reconciliación", imagen:"Imagenes/forseti.webp"  }
+                    { nombre: "Forseti", descripcion: "Dios de la justicia y la reconciliación. Hijo de Baldur y Nanna.", dominio: "Reconciliación", imagen: "Imagenes/forseti.webp" }
                 ]
             },
             "Dioses del Amor y la Luz": {
                 descripcion: "Deidades asociadas con el amor, la belleza y la luz",
                 dioses: [
-                    { nombre: "Freya", descripcion: "Diosa del amor, la belleza y la guerra. Líder de las Valquirias y maestra de la magia seidr.", dominio: "Amor", imagen:"Imagenes/freya.webp"  },
+                    { nombre: "Freya", descripcion: "Diosa del amor, la belleza y la guerra. Líder de las Valquirias y maestra de la magia seidr.", dominio: "Amor", imagen: "Imagenes/freya.webp" },
                     { nombre: "Baldur", descripcion: "El dios más amado, hijo de Odín y Frigg. Su muerte marca el inicio del Ragnarök.", dominio: "Luz", imagen: "Imagenes/baldur.webp" },
-                    { nombre: "Nanna", descripcion: "Diosa de la alegría y la paz. Esposa de Baldur, muere de pena tras su muerte.", dominio: "Alegría", imagen:"Imagenes/nanna.webp"  }
+                    { nombre: "Nanna", descripcion: "Diosa de la alegría y la paz. Esposa de Baldur, muere de pena tras su muerte.", dominio: "Alegría", imagen: "Imagenes/nanna.webp" }
                 ]
             },
             "Dioses de las Artes y la Prosperidad": {
                 descripcion: "Patronos de las artes, la música y la abundancia",
                 dioses: [
-                    { nombre: "Bragi", descripcion: "Dios de la poesía y la música. Esposo de Iðunn y maestro de los bardos.", dominio: "Poesía", imagen:"Imagenes/bragi.webp"  },
+                    { nombre: "Bragi", descripcion: "Dios de la poesía y la música. Esposo de Iðunn y maestro de los bardos.", dominio: "Poesía", imagen: "Imagenes/bragi.webp" },
                     { nombre: "Iðunn", descripcion: "Guardiana de las manzanas doradas que mantienen jóvenes a los dioses.", dominio: "Juventud", imagen: "Imagenes/iounn.webp" },
-                    { nombre: "Sif", descripcion: "Diosa de la cosecha y esposa de Thor. Conocida por su cabello dorado.", dominio: "Cosecha", imagen:  "Imagenes/sif.webp"}
+                    { nombre: "Sif", descripcion: "Diosa de la cosecha y esposa de Thor. Conocida por su cabello dorado.", dominio: "Cosecha", imagen: "Imagenes/sif.webp" }
                 ]
             }
         };
-    
+
         function crearCartas() {
             Object.entries(categorias).forEach(([categoria, info]) => {
                 const seccion = document.createElement('section');
                 seccion.className = 'categoria';
-                
+
                 seccion.innerHTML = `
-                    <h2 class="categoria-titulo">${categoria}</h2>
-                    <p class="categoria-descripcion">${info.descripcion}</p>
-                    <div class="container">
-                        ${info.dioses.map(dios => `
-                            <div class="carta">
-                                <div class="carta-inner">
-                                    <div class="cara frontal">
-                                        <div class="dominio-tag">${dios.dominio}</div>
-                                        <img src="${dios.imagen}" alt="${dios.nombre}">
-                                    </div>
-                                    <div class="cara trasera">
-                                        <h3>${dios.nombre}</h3>
-                                        <p>${dios.descripcion}</p>
-                                    </div>
-                                </div>
+            <h2 class="categoria-titulo">${categoria}</h2>
+            <p class="categoria-descripcion">${info.descripcion}</p>
+            <div class="container">
+                ${info.dioses.map(dios => `
+                    <div class="carta">
+                        <div class="carta-inner">
+                            <div class="cara frontal">
+                                <div class="dominio-tag">${dios.dominio}</div>
+                                <img src="${dios.imagen}" alt="${dios.nombre}">
                             </div>
-                        `).join('')}
+                            <div class="cara trasera">
+                                <h3>${dios.nombre}</h3>
+                                <p>${dios.descripcion}</p>
+                            </div>
+                        </div>
                     </div>
-                `;
-            
-                document.body.appendChild(seccion);
-                
+                `).join('')}
+            </div>
+        `;
+
+                document.querySelector('main').appendChild(seccion);
+
                 const cartas = seccion.querySelectorAll('.carta');
                 cartas.forEach(carta => {
                     carta.addEventListener('click', () => {
@@ -107,11 +139,12 @@
                 });
             });
         }
-    
+
         crearCartas();
     </script>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     background: linear-gradient(to bottom, #0a0a0a, #1c1c2e);
     color: #e0e0e0;
@@ -108,7 +107,6 @@ body {
     margin-top: 10px;
 }
 
-/* Dominio de los dioses */
 .dominio-tag {
     background: rgba(0, 0, 0, 0.8);
     color: gold;
@@ -121,7 +119,6 @@ body {
     text-shadow: 0 0 5px gold;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -148,4 +145,140 @@ body {
 .boton-sonido:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5rem;
+        padding: 15px 0;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+}
+
+
+
+header {
+    background: url('https://www.transparenttextures.com/patterns/wood.png'), #111122;
+    border-bottom: 3px solid gold;
+    padding: 20px 0;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.menu-navegacion li {
+    margin: 0 15px;
+}
+
+.menu-navegacion a {
+    color: silver;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.menu-navegacion a:hover {
+    color: gold;
+    text-shadow: 0 0 10px gold;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding-top: 20px;
+}
+
+footer {
+    background: url('https://www.transparenttextures.com/patterns/stone.png'), #111122;
+    border-top: 3px solid gold;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-seccion {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 20px 30px;
+}
+
+.footer-seccion h3 {
+    color: gold;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.footer-seccion p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.footer-seccion ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-seccion ul li {
+    margin-bottom: 10px;
+}
+
+.footer-seccion ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-seccion ul li a:hover {
+    color: gold;
+    text-shadow: 0 0 5px gold;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Ajuste para los media queries existentes */
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-navegacion li {
+        margin: 5px 0;
+    }
 }
